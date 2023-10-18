@@ -1,0 +1,103 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    align-items: left;
+    min-height: 100vh;
+    background-image: url(/foto/background.png);
+}
+.header{
+    background-color:transparent;
+    padding: 0;
+    margin: 0;
+    top: 0;
+    height: 50px;
+    width: 100%;
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+}
+.icon{
+    line-height: 50px;
+    padding: 0 50px;
+    color: black;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+}
+.item ul,li{
+    display: inline-block;
+}
+.item ul,li,a{
+    height: 50px;
+    line-height: 50px;
+    padding: 0 7px;
+    text-decoration: none;
+    color: black;
+    transition: 1s;
+}
+.item ul,li,a:hover{
+    color: red;
+}
+.portofolio{
+    padding-top: 120px;
+    width: 400px;
+    margin: 40% 40%;
+}
+.portofolio h2{
+    color: gray;
+    padding-left: 112px;
+}
+.portofolio .name{
+    font-size: 30px;
+    margin-left: 112px;
+}
+.wrapper{
+    display: flex;
+}
+.wrapper .dynamic-txts{
+    margin-left: 100px;
+    height: 90px;
+    line-height: 90px;
+    overflow: hidden;
+}
+.dynamic-txts li{
+    list-style: none;
+    color: #102C57;
+    font-size: 40px;
+    font-weight: 700;
+    position: relative;
+    top: 0;
+    animation: slide 12s steps(4) infinite;
+}
+@keyframes slide {
+    100%{
+    top: -360px;
+    }
+}
+.dynamic-txts li span{
+    position: relative;
+    margin: 2px 0;
+    line-height: 10px;
+}
+.dynamic-txts li span::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    height: 70px;
+    width: 100%;
+    background: white;
+    border-left: 2px solid #070079;
+    animation: typing 3s steps(10) infinite;
+}
+@keyframes typing {
+    40%, 60%{
+    left: calc(100% + 30px);
+    }
+    100%{
+    left: 0;
+    }
+}
